@@ -1,0 +1,57 @@
+.started-container,
+.start-weather-heading,
+.weather-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.started-container {
+  background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 100px;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+.started-container:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.start-weather-image img {
+  width: 400px;
+}
+.start-weather-heading {
+  font-size: 2rem;
+}
+.weather-title {
+}
+.start-weather-heading h1 {
+  color: #fff;
+}
+.start-weather-heading h2 {
+  margin-top: -15px;
+  color: yellow;
+}
+.start-weather-heading h1,
+.start-weather-heading h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.started-button-container {
+  margin-top: 25px;
+}
+.get-started-button {
+  padding: 10px 25px;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background: yellow;
+  color: #330867;
+  font-weight: 700;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+}
+.get-started-button:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}

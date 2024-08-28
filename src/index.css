@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+body {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  background-repeat: no-repeat;
+}
