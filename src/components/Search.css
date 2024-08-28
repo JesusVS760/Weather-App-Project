@@ -1,0 +1,30 @@
+.searh-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.searh-contents input {
+  padding: 25px;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+}
+.searh-contents .input-border-clear {
+  border: none;
+  outline: none;
+}
+.searh-contents button {
+  cursor: pointer;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.searh-contents button img {
+  width: 35px;
+}
+.searh-contents .input-border-red {
+  border: 3px solid red;
+}
