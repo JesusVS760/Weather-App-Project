@@ -21,6 +21,11 @@
   border-radius: 10px;
   border: none;
   outline: none;
+  background: #fff;
+  transition: 0.3s ease;
+}
+.searh-contents button:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 .searh-contents button img {
   width: 35px;

@@ -19,14 +19,11 @@
 .started-container:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
-.start-weather-image img {
-  width: 400px;
-}
+
 .start-weather-heading {
   font-size: 2rem;
 }
-.weather-title {
-}
+
 .start-weather-heading h1 {
   color: #fff;
 }

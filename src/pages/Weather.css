@@ -1,2 +1,32 @@
 .search-for-city {
+  margin-bottom: 50px;
+}
+.weather-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-size: 1.7rem;
+}
+.weather-specifics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-size: 2rem;
+  margin-top: 15px;
+}
+
+.humidity,
+.wind-speed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 1rem;
+}
+.humidity-condition-image img,
+.wind-condition-image img {
+  width: 50px;
 }
