@@ -59,7 +59,9 @@ const Weather = () => {
   console.log("result", currentWeather);
 
   const handleReceivedCity = (enteredCity) => {
-    setCity(enteredCity);
+    if (enteredCity == "") {
+      return;
+    } else setCity(enteredCity);
   };
 
   const navigate = useNavigate();
