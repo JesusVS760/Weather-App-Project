@@ -8,10 +8,10 @@
   flex-direction: row;
   gap: 5px;
   margin-top: 25px;
-  width: 80%;
 }
 .weather-container {
   max-width: 600px;
+  height: 875px;
 }
 .weather-content {
   display: flex;

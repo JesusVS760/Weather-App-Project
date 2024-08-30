@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import search from "../images/Search.png";
 import "./Search.css";
-const Search = () => {
+const Search = ({ handleReceivedCity }) => {
   const [isValidCity, setIsValidCity] = useState(true);
   const [enteredCity, setEnteredCity] = useState("");
 
