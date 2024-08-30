@@ -21,6 +21,9 @@
   color: white;
   font-size: 1.7rem;
 }
+.weather-content img {
+  width: 250px;
+}
 .weather-specifics {
   display: flex;
   align-items: center;

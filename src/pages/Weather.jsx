@@ -10,15 +10,16 @@ import mistImage from "../images/mist.png";
 import windImage from "../images/wind.png";
 import humidity from "../images/humidity.png";
 import Forecast from "../components/Forecast";
+
 const Weather = () => {
   const [currentWeather, setCurrentWeather] = useState(null);
-  // const [findWeatherImage, setFindWeatherImage] = useState("");
   const [weatherImage, setWeatherImage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [city, setCity] = useState("Los Angeles");
 
   const apiKey = "86d6b425824db57f05a570be0012f6d3";
   const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?units=metric&q=${city}&appid=${apiKey}`;
+
   useEffect(() => {
     const fetchWeather = async () => {
       try {
@@ -54,7 +55,7 @@ const Weather = () => {
     };
     fetchWeather();
   }, [city]);
-  // console.log("result", currentWeather);
+  console.log("result", currentWeather);
 
   const handleReceivedCity = (enteredCity) => {
     setCity(enteredCity);
