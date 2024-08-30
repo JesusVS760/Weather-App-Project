@@ -16,15 +16,15 @@ const Weather = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const apiKey = "86d6b425824db57f05a570be0012f6d3";
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=london&appid=${apiKey}`;
-
+  const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?units=metric&q=london&appid=${apiKey}`;
+  const apiWeekForcast = `https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=${apiKey}`;
   useEffect(() => {
     const fetchWeather = async () => {
       try {
         const response = await fetch(apiUrl);
         const result = await response.json();
         setCurrentWeather(result);
-        const weatherCondition = result.weather?.[0]?.main;
+        const weatherCondition = result.list[0].weather[0].main;
         switch (weatherCondition) {
           case "Clear":
             setWeatherImage(ClearImage);
@@ -57,7 +57,6 @@ const Weather = () => {
 
   return (
     <div>
-      {" "}
       {currentWeather && (
         <div className="weather-container">
           <div className="search-for-city">
@@ -65,15 +64,15 @@ const Weather = () => {
           </div>
           <div className="weather-content">
             <img src={weatherImage} alt="image here" />
-            <h1>{currentWeather.main?.temp}°C</h1>
-            <h2>{currentWeather.name}</h2>
+            <h1>{currentWeather.list[0].main.temp}°C</h1>
+            <h2>{currentWeather.city.name}</h2>
             <div className="weather-specifics">
               <div className="humidity">
                 <div className="humidity-condition-image">
                   <img src={humidity} alt="humidity condition" />
                 </div>
                 <div className="humidity-info">
-                  <h2>{currentWeather.main?.humidity}%</h2>
+                  <h2>{currentWeather.list[0].main?.humidity}%</h2>
                   <h3>Humidity</h3>
                 </div>
               </div>
@@ -82,12 +81,13 @@ const Weather = () => {
                   <img src={windImage} alt="wind condition" />
                 </div>
                 <div className="wind-speed-info">
-                  <h2>{currentWeather.wind?.speed} km/h</h2>
+                  <h2>{currentWeather.list[0].wind?.speed} km/h</h2>
                   <h3>Wind Speed</h3>
                 </div>
               </div>
             </div>
           </div>
+          <div className="weather-forecast"></div>
         </div>
       )}
     </div>
