@@ -10,6 +10,7 @@ import mistImage from "../images/mist.png";
 import windImage from "../images/wind.png";
 import humidity from "../images/humidity.png";
 import Forecast from "../components/Forecast";
+import { useNavigate } from "react-router-dom";
 
 const Weather = () => {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -60,6 +61,13 @@ const Weather = () => {
   const handleReceivedCity = (enteredCity) => {
     setCity(enteredCity);
   };
+
+  const navigate = useNavigate();
+
+  const handleNextPage = () => {
+    navigate("/Information");
+  };
+
   return (
     <div className="weather-wrap">
       {currentWeather && (
@@ -97,6 +105,9 @@ const Weather = () => {
               weatherData={currentWeather}
               weatherCondition={weatherImage}
             />
+          </div>
+          <div className="more-information">
+            <button onClick={handleNextPage}>PM Accelerator Description</button>
           </div>
         </div>
       )}

@@ -24,6 +24,10 @@
   border-radius: 50px;
   padding: 20px 5px;
   max-width: 90px;
+  transition: 0.3s ease;
+}
+.forecast-card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
 }
 .forecast-card img {
   width: 75px;

@@ -1,3 +1,6 @@
+.search-container {
+  margin-bottom: -50px;
+}
 .searh-contents {
   display: flex;
   align-items: center;

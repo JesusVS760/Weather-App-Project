@@ -11,7 +11,7 @@
 }
 .weather-container {
   max-width: 600px;
-  height: 875px;
+  height: 900px;
 }
 .weather-content {
   display: flex;
@@ -44,4 +44,20 @@
 .humidity-condition-image img,
 .wind-condition-image img {
   width: 50px;
+}
+.more-information button {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease;
+  background: #330867;
+  color: #fff;
+}
+.more-information button:hover {
+  border: 1px solid #330867;
+  background: transparent;
 }

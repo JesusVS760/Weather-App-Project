@@ -1,0 +1,16 @@
+.info-content {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  font-size: 0.8rem;
+  padding: 50px;
+  color: black;
+  font-weight: bold;
+  max-height: 100vh;
+}
+ul li {
+  display: list-item;
+}
+.information-container {
+  background-color: white;
+}

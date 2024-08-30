@@ -1,7 +1,8 @@
 .started-container,
 .start-weather-heading,
 .weather-title,
-.weather-container {
+.weather-container,
+.information-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +46,6 @@
 .started-button-container {
   margin-top: 25px;
 }
-
 .get-started-button {
   padding: 10px 25px;
   font-size: 2rem;
@@ -61,4 +61,6 @@
 }
 .get-started-button:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  border: 1px solid #330867;
+  background: transparent;
 }
