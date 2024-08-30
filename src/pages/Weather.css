@@ -1,6 +1,18 @@
 .search-for-city {
   margin-bottom: 50px;
 }
+.weather-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+  margin-top: 25px;
+  width: 80%;
+}
+.weather-container {
+  max-width: 600px;
+}
 .weather-content {
   display: flex;
   align-items: center;

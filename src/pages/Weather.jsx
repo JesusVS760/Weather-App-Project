@@ -9,6 +9,7 @@ import drizzleImage from "../images/drizzle.png";
 import mistImage from "../images/mist.png";
 import windImage from "../images/wind.png";
 import humidity from "../images/humidity.png";
+import Forecast from "../components/Forecast";
 const Weather = () => {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [findWeatherImage, setFindWeatherImage] = useState("");
@@ -16,8 +17,7 @@ const Weather = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const apiKey = "86d6b425824db57f05a570be0012f6d3";
-  const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?units=metric&q=london&appid=${apiKey}`;
-  const apiWeekForcast = `https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=${apiKey}`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?units=metric&q=san diego&appid=${apiKey}`;
   useEffect(() => {
     const fetchWeather = async () => {
       try {
@@ -56,7 +56,7 @@ const Weather = () => {
   console.log("result", currentWeather);
 
   return (
-    <div>
+    <div className="weather-wrap">
       {currentWeather && (
         <div className="weather-container">
           <div className="search-for-city">
@@ -87,7 +87,12 @@ const Weather = () => {
               </div>
             </div>
           </div>
-          <div className="weather-forecast"></div>
+          <div className="weather-forecast">
+            <Forecast
+              weatherData={currentWeather}
+              weatherCondition={weatherImage}
+            />
+          </div>
         </div>
       )}
     </div>

@@ -1,0 +1,30 @@
+.forecast-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+  margin-top: 25px;
+}
+.forecast-heading,
+.forecast-container {
+  color: white;
+}
+.forecast-heading {
+  padding: 5px;
+  margin-top: 15px;
+  margin-bottom: -15px;
+}
+.forecast-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #330867;
+  border-radius: 50px;
+  padding: 20px 5px;
+  max-width: 100px;
+}
+.forecast-card img {
+  width: 75px;
+}
