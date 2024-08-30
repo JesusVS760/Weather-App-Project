@@ -53,13 +53,12 @@ const Weather = () => {
       }
     };
     fetchWeather();
-  }, []);
+  }, [city]);
   // console.log("result", currentWeather);
 
   const handleReceivedCity = (enteredCity) => {
     setCity(enteredCity);
   };
-
   return (
     <div className="weather-wrap">
       {currentWeather && (

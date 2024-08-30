@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import search from "../images/Search.png";
 import "./Search.css";
-const Search = ({ handleReceivedCity }) => {
+const Search = ({ setCity }) => {
   const [isValidCity, setIsValidCity] = useState(true);
   const [enteredCity, setEnteredCity] = useState("");
 
@@ -11,8 +11,13 @@ const Search = ({ handleReceivedCity }) => {
       setIsValidCity(false);
     } else {
       setIsValidCity(true);
+      setEnteredCity(city);
     }
   };
+  const handleSearch = (seachForCity) => {
+    setCity(seachForCity);
+  };
+
   return (
     <div className="search-container">
       <div className="searh-contents">
@@ -22,7 +27,7 @@ const Search = ({ handleReceivedCity }) => {
           type="text"
           placeholder="Enter city name"
         />
-        <button>
+        <button onClick={() => handleSearch(enteredCity)}>
           <img src={search} alt="search icon" />
         </button>
       </div>
