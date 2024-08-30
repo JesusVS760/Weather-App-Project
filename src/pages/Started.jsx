@@ -26,6 +26,7 @@ const Started = () => {
             Get Started
           </button>
         </div>
+        <p>Created by Jesus Vazquez</p>
       </div>
     </div>
   );
