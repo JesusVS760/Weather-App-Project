@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import search from "../images/Search.png";
+import search from "../images/search.png";
 import "./Search.css";
 const Search = ({ setCity }) => {
   const [isValidCity, setIsValidCity] = useState(true);
